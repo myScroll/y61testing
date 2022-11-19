@@ -1,0 +1,216 @@
+<html>
+<head>
+<title>flex box</title>
+<link type="text/css" />
+<style>
+nav{
+background:rgb(100,0,1);
+padding:20px 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+/*first nav div nissan logo*/
+nav img{
+    width: 70px;
+    border-radius: 4px;
+}
+/*second nav div logo*/
+.dadnav{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+grid-template-rows:1fr 1fr 1fr;
+width:70px;
+height:70px;
+margin:auto 0;
+line-height:1.6;
+gap:2px;
+justify-content:center;
+align-content:center;
+}
+.dadinner{
+margin:1px;
+background:rgb(160,0,47);
+border-radius:2px;
+box-shadow:-1px -1px 5px #000010;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+/*third nav div ooen side bar*/
+nav .open{
+align-items:center;
+justify-content:center;
+display:flex;
+flex-direction:column;
+width: 70px;
+height: 70px;
+}
+nav span{
+    width: 39px;
+    height: 6px;
+    margin: 1.5px;
+    border-radius: 3px;
+    background-color: #f3dede;
+}
+/*side bar*/
+.sidebar{
+background-color:#ffe4c4;
+display:none;
+opacity:90%;
+width: 45%;
+min-height: 50vh;
+z-index: 999;
+border-bottom-left-radius: 4px;
+
+}
+.sidebar div{
+    margin: 0 auto;
+    width: 95%;
+    text-align: center;
+    height: 245px;
+    line-height: 245px;
+    z-index: 999;
+    border-bottom: solid 0.5px;
+    font-size: 40px;
+
+}
+.sidebar div:last-child{
+    border:none
+}
+.sidebar div:hover{
+    font-weight: bold;
+    font-style:italic;
+    transition: all .5s;
+}
+/*main box*/
+.bigdiv{
+
+}
+.bigdiv div{
+
+}
+
+/*my flex box*/
+.mybox{
+display:flex;
+justify-content:space-between;
+padding:10px 6%;
+flex-wrap:wrap;
+}
+.mybox div{
+width:40%;
+position: relative;
+}
+.mybox div img{
+width:100%;
+height:385px;
+}
+
+.mybox div hr{
+width:96%;
+
+}
+.mybox div h4{
+text-align:center;
+font-style:sans-serif;
+}
+/*js styles*/
+.sidebar-js{
+display:block;
+}
+</style>
+</head>
+<body style="padding:0;margin:0;font-size:20px;">
+<nav>
+<!--First div nissan logo-->
+<img src="nissanlogo11.png">
+<!--second div logo-->
+<div class="dadnav">
+
+<div style="border-bottom-right-radius:8.333px;background-image:url('nissanlogo11.png');background-size:contain;
+opacity:80%;" class="dadinner">
+</div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+<div class="dadinner"></div>
+
+</div>
+<!--third open sidebar-->
+<div class="open">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</nav>
+<!--side bar-->
+<div style="position:absolute;right:0;min-height:40vh;border:solid .5px;" class="sidebar">
+<div>Y60</div>
+<div>Y61</div>
+<div>Y62</div>
+</div>
+<!--in the main box-->
+<div class="bigdiv">
+<img src="NISSAN.jpg" style="width:100%;background-color:dark-red">
+<hr style="width:97%;margin-top:15px;color:#000;">
+</div>
+<!--my flex div(mybox)-->
+<div class="mybox">
+
+<!--First Photo-->
+<div>
+<img src="jz8gear.jpg">
+<hr>
+<h4>Y61 Head Gear B</h4>
+</div>
+<!--Second Photo-->
+<div>
+<img src="y61HeadGearBR.jpg">
+<hr>
+<h4>Y61 Front Bumper</h4>
+</div>
+<!--First Phote | Scound Line-->
+<div>
+    <img src="jz8shortbumper.jpg">
+    <hr>
+    <h4>Y61 Front Bumper</h4>
+</div>
+<!--Scound Photo | Scound Line-->
+<div>
+    <img src="y61foodTableB.png">
+    <hr>
+    <h4>Y61 Front Bumper</h4>
+</div>
+<!--First Photo | Third Line-->
+<div>
+    <img src="y611.png">
+    <hr>
+    <h4>Y61 Front Bumper</h4>
+</div>
+<!--Scound Photo | Third Line-->
+<div>
+    <img src="y61carpetLB.png">
+    <hr>
+    <h4>Y61 Front Bumper</h4>
+</div>
+
+</div>
+
+
+
+
+
+
+<!--js-->
+<script>
+document.querySelector(".open").onclick = function(){
+document.querySelector(".sidebar").classList.toggle("sidebar-js")
+}
+</script>
+</body>
+</html>
